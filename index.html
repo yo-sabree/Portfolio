@@ -13,7 +13,7 @@
     <!-- Chart.js -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <style>
-        /* General body styling for a bright theme */
+        /* General body styling for a bright theme with smooth transitions */
         body {
             font-family: 'Inter', sans-serif;
             background-color: #f0f2f5;
@@ -37,27 +37,37 @@
             height: 4px;
             background-color: #00b894; /* A vibrant teal accent */
             border-radius: 9999px;
+            transition: width 0.3s ease-in-out;
+        }
+        .section-title:hover::after {
+            width: 100%;
         }
 
-        /* Custom styling for cards to add depth and a modern look */
+        /* Custom styling for cards with more elegant hover effects */
         .card {
             background-color: #ffffff;
             border: 1px solid #e0e0e0;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05), 0 2px 6px rgba(0, 0, 0, 0.03);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
             transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
         }
         .card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1), 0 4px 10px rgba(0, 0, 0, 0.05);
+            transform: translateY(-8px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
         }
 
-        /* Custom styling for the skills chart to match the bright theme */
-        #skillsChart {
-            background-color: #fdfdfd;
-            border-radius: 1.5rem;
+        /* Styling for skill tags with hover effects */
+        .skill-tag {
+            background-color: #e2e8f0; /* bg-gray-200 */
+            color: #4a5568; /* text-gray-700 */
+            transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+        }
+        .skill-tag:hover {
+            background-color: #00b894; /* bg-teal-500 */
+            color: #ffffff;
+            transform: translateY(-2px);
         }
 
-        /* Style for buttons to add a modern, interactive feel */
+        /* Custom styling for buttons with hover effects */
         .btn-primary {
             background-color: #00b894;
             color: #ffffff;
@@ -121,7 +131,7 @@
         </div>
     </header>
 
-    <main class="container mx-auto p-4 md:p-8 space-y-20 md:space-y-28">
+    <main class="container mx-auto p-4 md:p-8 space-y-16 md:space-y-20">
 
         <!-- Hero Section -->
         <section id="hero" class="relative overflow-hidden h-screen flex items-center justify-center text-center">
@@ -142,7 +152,7 @@
         </section>
 
         <!-- About Section -->
-        <section id="about" class="pt-20">
+        <section id="about" class="pt-16">
             <div class="max-w-4xl mx-auto card p-8 md:p-12 rounded-3xl">
                 <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6 text-center section-title mx-auto">About Me</h2>
                 <p class="text-lg md:text-xl text-gray-600 leading-relaxed text-justify max-w-3xl mx-auto">
@@ -167,25 +177,25 @@
                 <div class="card p-6 md:p-8 rounded-3xl">
                     <h3 class="text-xl md:text-2xl font-semibold mb-6 text-center text-gray-900">Technical Skills</h3>
                     <div class="flex flex-wrap justify-center gap-2 md:gap-3">
-                        <span class="bg-gray-200 text-gray-700 px-3 py-1 rounded-full text-sm font-medium transition-colors duration-200 hover:bg-teal-500 hover:text-white">Python</span>
-                        <span class="bg-gray-200 text-gray-700 px-3 py-1 rounded-full text-sm font-medium transition-colors duration-200 hover:bg-teal-500 hover:text-white">JavaScript</span>
-                        <span class="bg-gray-200 text-gray-700 px-3 py-1 rounded-full text-sm font-medium transition-colors duration-200 hover:bg-teal-500 hover:text-white">SQL</span>
-                        <span class="bg-gray-200 text-gray-700 px-3 py-1 rounded-full text-sm font-medium transition-colors duration-200 hover:bg-teal-500 hover:text-white">MongoDB</span>
-                        <span class="bg-gray-200 text-gray-700 px-3 py-1 rounded-full text-sm font-medium transition-colors duration-200 hover:bg-teal-500 hover:text-white">Redis</span>
-                        <span class="bg-gray-200 text-gray-700 px-3 py-1 rounded-full text-sm font-medium transition-colors duration-200 hover:bg-teal-500 hover:text-white">Vertex AI</span>
-                        <span class="bg-gray-200 text-gray-700 px-3 py-1 rounded-full text-sm font-medium transition-colors duration-200 hover:bg-teal-500 hover:text-white">AWS</span>
-                        <span class="bg-gray-200 text-gray-700 px-3 py-1 rounded-full text-sm font-medium transition-colors duration-200 hover:bg-teal-500 hover:text-white">Pandas</span>
-                        <span class="bg-gray-200 text-gray-700 px-3 py-1 rounded-full text-sm font-medium transition-colors duration-200 hover:bg-teal-500 hover:text-white">TensorFlow</span>
-                        <span class="bg-gray-200 text-gray-700 px-3 py-1 rounded-full text-sm font-medium transition-colors duration-200 hover:bg-teal-500 hover:text-white">Hugging Face</span>
-                        <span class="bg-gray-200 text-gray-700 px-3 py-1 rounded-full text-sm font-medium transition-colors duration-200 hover:bg-teal-500 hover:text-white">Large Language Models</span>
-                        <span class="bg-gray-200 text-gray-700 px-3 py-1 rounded-full text-sm font-medium transition-colors duration-200 hover:bg-teal-500 hover:text-white">LangChain</span>
-                        <span class="bg-gray-200 text-gray-700 px-3 py-1 rounded-full text-sm font-medium transition-colors duration-200 hover:bg-teal-500 hover:text-white">LangGraph</span>
-                        <span class="bg-gray-200 text-gray-700 px-3 py-1 rounded-full text-sm font-medium transition-colors duration-200 hover:bg-teal-500 hover:text-white">LlamaIndex</span>
-                        <span class="bg-gray-200 text-gray-700 px-3 py-1 rounded-full text-sm font-medium transition-colors duration-200 hover:bg-teal-500 hover:text-white">Vector and Graph Databases</span>
-                        <span class="bg-gray-200 text-gray-700 px-3 py-1 rounded-full text-sm font-medium transition-colors duration-200 hover:bg-teal-500 hover:text-white">Text-to-Speech</span>
-                        <span class="bg-gray-200 text-gray-700 px-3 py-1 rounded-full text-sm font-medium transition-colors duration-200 hover:bg-teal-500 hover:text-white">OpenCV</span>
-                        <span class="bg-gray-200 text-gray-700 px-3 py-1 rounded-full text-sm font-medium transition-colors duration-200 hover:bg-teal-500 hover:text-white">Docker</span>
-                        <span class="bg-gray-200 text-gray-700 px-3 py-1 rounded-full text-sm font-medium transition-colors duration-200 hover:bg-teal-500 hover:text-white">CI/CD</span>
+                        <span class="skill-tag px-3 py-1 rounded-full text-sm font-medium">Python</span>
+                        <span class="skill-tag px-3 py-1 rounded-full text-sm font-medium">JavaScript</span>
+                        <span class="skill-tag px-3 py-1 rounded-full text-sm font-medium">SQL</span>
+                        <span class="skill-tag px-3 py-1 rounded-full text-sm font-medium">MongoDB</span>
+                        <span class="skill-tag px-3 py-1 rounded-full text-sm font-medium">Redis</span>
+                        <span class="skill-tag px-3 py-1 rounded-full text-sm font-medium">Vertex AI</span>
+                        <span class="skill-tag px-3 py-1 rounded-full text-sm font-medium">AWS</span>
+                        <span class="skill-tag px-3 py-1 rounded-full text-sm font-medium">Pandas</span>
+                        <span class="skill-tag px-3 py-1 rounded-full text-sm font-medium">TensorFlow</span>
+                        <span class="skill-tag px-3 py-1 rounded-full text-sm font-medium">Hugging Face</span>
+                        <span class="skill-tag px-3 py-1 rounded-full text-sm font-medium">Large Language Models</span>
+                        <span class="skill-tag px-3 py-1 rounded-full text-sm font-medium">LangChain</span>
+                        <span class="skill-tag px-3 py-1 rounded-full text-sm font-medium">LangGraph</span>
+                        <span class="skill-tag px-3 py-1 rounded-full text-sm font-medium">LlamaIndex</span>
+                        <span class="skill-tag px-3 py-1 rounded-full text-sm font-medium">Vector and Graph Databases</span>
+                        <span class="skill-tag px-3 py-1 rounded-full text-sm font-medium">Text-to-Speech</span>
+                        <span class="skill-tag px-3 py-1 rounded-full text-sm font-medium">OpenCV</span>
+                        <span class="skill-tag px-3 py-1 rounded-full text-sm font-medium">Docker</span>
+                        <span class="skill-tag px-3 py-1 rounded-full text-sm font-medium">CI/CD</span>
                     </div>
                 </div>
             </div>
@@ -262,7 +272,7 @@
         </section>
         
         <!-- Education Section -->
-        <section id="education" class="pt-20">
+        <section id="education" class="pt-16">
             <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-12 text-center section-title mx-auto">Education</h2>
             <div class="max-w-4xl mx-auto card p-8 rounded-3xl">
                 <h3 class="text-2xl font-bold text-gray-900">Bachelor of Technology in AI and Data Science</h3>
