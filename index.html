@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sabareesh M B - AI Engineer</title>
+    <title>Sabareesh MB - AI Engineer</title>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Inter & Poppins Fonts from Google Fonts -->
+    <!-- Inter Font from Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <!-- Chart.js -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <style>
@@ -21,26 +21,6 @@
             text-rendering: optimizeLegibility;
             -webkit-font-smoothing: antialiased;
             background: radial-gradient(circle at 10% 20%, rgb(255, 255, 255) 0%, rgb(255, 240, 248) 50%, rgb(240, 255, 255) 100%);
-        }
-
-        /* Poppins font for headings */
-        h1, h2, h3 {
-            font-family: 'Poppins', sans-serif;
-        }
-
-        /* Glow effect for main title */
-        .glow-text {
-            text-shadow: 0 0 5px rgba(0, 184, 148, 0.4), 0 0 10px rgba(0, 184, 148, 0.3);
-        }
-
-        /* Pulsating glow for the profile picture */
-        @keyframes profile-glow {
-            0% { box-shadow: 0 0 0 0px rgba(0, 184, 148, 0.4); }
-            50% { box-shadow: 0 0 0 10px rgba(0, 184, 148, 0); }
-            100% { box-shadow: 0 0 0 0px rgba(0, 184, 148, 0.4); }
-        }
-        .profile-image-glow {
-            animation: profile-glow 2s infinite ease-in-out;
         }
 
         /* Styling for section titles with a vibrant underline */
@@ -96,12 +76,11 @@
             padding: 0.75rem 2rem;
             border-radius: 9999px;
             box-shadow: 0 4px 6px rgba(0, 184, 148, 0.2);
-            transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+            transition: background-color 0.3s ease, transform 0.2s ease;
         }
         .btn-primary:hover {
             background-color: #00a082;
             transform: translateY(-2px);
-            box-shadow: 0 6px 15px rgba(0, 184, 148, 0.4);
         }
 
         .btn-secondary {
@@ -110,13 +89,12 @@
             font-weight: 700;
             padding: 0.75rem 2rem;
             border-radius: 9999px;
-            transition: border-color 0.3s ease, color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+            transition: border-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
         }
         .btn-secondary:hover {
             border-color: #00b894;
             color: #00b894;
             transform: translateY(-2px);
-            box-shadow: 0 6px 15px rgba(0, 184, 148, 0.2);
         }
 
         /* Fade-in animation for sections */
@@ -136,7 +114,7 @@
     <!-- Header & Navigation -->
     <header class="sticky top-0 z-50 bg-white bg-opacity-90 backdrop-blur-sm shadow-lg py-4 px-4 md:px-8">
         <nav class="container mx-auto flex justify-between items-center">
-            <a href="#" class="text-2xl font-extrabold text-teal-500 font-poppins">Sabareesh M B</a>
+            <a href="#" class="text-2xl font-extrabold text-teal-500">Sabareesh MB</a>
             <div class="hidden md:flex space-x-6">
                 <a href="#about" class="hover:text-teal-500 font-medium transition-colors duration-300">About</a>
                 <a href="#skills" class="hover:text-teal-500 font-medium transition-colors duration-300">Skills</a>
@@ -171,9 +149,9 @@
         <section id="hero" class="relative overflow-hidden min-h-[80vh] flex items-center justify-center text-center py-16">
             <div class="flex flex-col items-center">
                 <div class="flex justify-center mb-6">
-                    <img src="https://raw.githubusercontent.com/yo-sabree/Portfolio/main/myimage.png" alt="Sabareesh M B" class="rounded-full ring-4 ring-teal-500 w-40 h-40 object-cover profile-image-glow">
+                    <img src="https://raw.githubusercontent.com/yo-sabree/Portfolio/main/myimage.png" alt="Sabareesh MB" class="rounded-full ring-4 ring-teal-500 w-40 h-40 object-cover">
                 </div>
-                <h1 class="text-4xl md:text-6xl font-extrabold text-gray-900 mb-2 leading-tight glow-text">Sabareesh M B</h1>
+                <h1 class="text-4xl md:text-6xl font-extrabold text-gray-900 mb-2 leading-tight">Sabareesh MB</h1>
                 <p class="text-xl md:text-2xl font-light text-gray-600 mb-4">AI Engineer & Data Scientist</p>
                 <p class="text-lg text-teal-500 font-semibold mb-6 animate-pulse">
                     Open to international relocation!
@@ -350,7 +328,7 @@
 
     <!-- Footer -->
     <footer class="text-center py-6 text-gray-500">
-        <p>&copy; 2024 Sabareesh M B. All rights reserved.</p>
+        <p>&copy; 2024 Sabareesh MB. All rights reserved.</p>
     </footer>
 
     <script>
